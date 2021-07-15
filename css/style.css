@@ -53,7 +53,7 @@ ul li a,
     line-height: 27px;
     text-decoration: none;
     color: #717171;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
 }
 
@@ -166,29 +166,36 @@ h3, h4 {
 }
 
 .title-row {
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .subtitle {
     color: #717171;
     font-size: 13px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .album-box img {
     width: 100%;
-    object-fit: cover;
 }
 
-.album-box {
-    width: 15%;
-    margin-bottom: 20px;
-    float: left;
+.artist-box img {
+    width: 100%;
+    border-radius: 50%;
 }
+
+.album-box, .artist-box {
+    width: 16%;
+    margin: 0 8px 0 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 
 .row-main {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 /* Footer band */
@@ -215,4 +222,10 @@ ul li a:hover, .foot-side-menu a:hover {
 
 .menu-center ul li:hover {
     border-bottom: 1px solid #adff2f;
+    color: #fff;
+}
+
+.menu-center ul li:hover a{
+    color: #fff;
+
 }

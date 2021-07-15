@@ -209,6 +209,51 @@ h3, h4 {
     background-color: #282828;
 }
 
+.content-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+[class*="col"] {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 300px;
+    border: 1px solid #fff;
+}
+
+.col-left [class*="fa"]{
+    color: #878787;
+}
+
+.artist-playing {
+    /* width: 30%; */
+    overflow: hidden;
+}
+
+.artist-playing img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.artist a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.song a{
+    color: #717171;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+div a .fa-heart, div a .fa-folder {
+    margin-left: 5px;
+    
+}
 
 /* Hover */
 

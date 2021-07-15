@@ -27,7 +27,7 @@ body {
 .up-band {
     position: fixed;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     right: 0;
     top: 0;
@@ -43,7 +43,7 @@ body {
     border: 2px solid #fff;
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
+    font-weight: 00;
     margin-right: 10px;
     font-size: 13px;
 }

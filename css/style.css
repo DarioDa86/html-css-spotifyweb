@@ -31,15 +31,6 @@ main {
     overflow-y: auto;
 }
 
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
-    width: calc(100% - 200px);
-    margin-bottom: 80px;
-    background-color: yellow;
-}
-
 .logo-spotify>img {
     width: 130px;
     margin: 20px 0;
@@ -133,6 +124,21 @@ h4 img {
     margin-right: 10px;
     font-size: 13px;
 }
+
+/* Content centrale */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    width: calc(100% - 200px);
+    margin-bottom: 80px;
+    background-color: yellow;
+    padding-top: 90px;
+    overflow-y: auto;
+}
+
+/* Footer band */
 
 .footer-band {
     position: fixed;

@@ -1,16 +1,23 @@
+/* reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+
 body {
     background-color:  #141922;
     font-family: 'Montserrat', sans-serif;
-}
-
-main {
-    
 }
 
 
@@ -40,7 +47,9 @@ ul li {
     list-style: none;
 }
 
-ul li a, .foot-side-menu a{
+ul li a, 
+.menu-center ul li a, 
+.foot-side-menu a {
     line-height: 27px;
     text-decoration: none;
     color: #717171;
@@ -110,7 +119,7 @@ h4 img {
     top: 0;
     height: 80px;
     width: calc(100% - 200px);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .btn-upgrade {
@@ -128,14 +137,52 @@ h4 img {
 /* Content centrale */
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
     float: right;
     width: calc(100% - 200px);
     margin-bottom: 80px;
-    background-color: yellow;
-    padding-top: 90px;
+    /* background-color: yellow; */
+    padding: 90px 20px 0 20px;
     overflow-y: auto;
+}
+
+.menu-center ul li {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.menu-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3, h4 {
+    color: #fff;
+}
+
+.music-type {
+    margin: 15px 0 5px;
+    text-align: center;
+}
+
+.title-row {
+    margin: 20px 0;
+}
+
+.subtitle {
+    color: #717171;
+    font-size: 13px;
+    text-align: center;
+}
+
+.album-box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.row-main {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Footer band */
@@ -160,4 +207,8 @@ ul li a:hover, .foot-side-menu a:hover {
 
 .btn-upgrade:hover {
     transform: scale(1.1);
+}
+
+.menu-center ul li:hover {
+    border-bottom: 1px solid #adff2f;
 }

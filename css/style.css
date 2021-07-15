@@ -32,9 +32,11 @@ main {
 }
 
 .content {
+    display: flex;
+    flex-wrap: wrap;
     float: right;
     width: calc(100% - 200px);
-    height: calc(100% - 80px);
+    margin-bottom: 80px;
     background-color: yellow;
 }
 

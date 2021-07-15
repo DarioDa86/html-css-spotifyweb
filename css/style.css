@@ -7,12 +7,21 @@
 body {
     background-color:  #141922;
     font-family: 'Montserrat', sans-serif;
+}
+
+main {
     
 }
 
+
+/* Side Menu */
+
 .side-menu {
+    float: left;
     position: fixed;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 2;
     width: 200px;
     height: calc(100vh - 80px);
@@ -22,48 +31,12 @@ body {
     overflow-y: auto;
 }
 
-/* barra superiore */
-
-.up-band {
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    right: 0;
-    top: 0;
-    height: 80px;
-    width: calc(100vw - 200px);
-    background-color: rgba(0, 0, 0, 0.5);
+.content {
+    float: right;
+    width: calc(100% - 200px);
+    height: calc(100% - 80px);
+    background-color: yellow;
 }
-
-.btn-upgrade {
-    padding: 10px 35px;
-    border-radius: 20px;
-    background-color: #000;
-    border: 2px solid #fff;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 00;
-    margin-right: 10px;
-    font-size: 13px;
-}
-
-.btn-upgrade a {
-
-}
-
-
-
-.footer-band {
-    position: fixed;
-    z-index: 3;
-    bottom: 0;
-    height: 80px;
-    width: 100%;
-    background-color: #282828;
-}
-
-/* Side Menu */
 
 .logo-spotify>img {
     width: 130px;
@@ -109,7 +82,7 @@ ul li:last-child {
 
 .foot-side-menu {
     width: 170px;
-    margin-top: 120px;
+    margin-bottom: 5px;
 }
 
 .fa-arrow-alt-circle-down {
@@ -118,7 +91,11 @@ ul li:last-child {
 }
 
 .square {
-    height: 1000px;
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    background-color: red;
+    border: 1px solid #fff;
 }
 
 h4 img {
@@ -129,7 +106,40 @@ h4 img {
     vertical-align: middle;
 }
 
+/* barra superiore */
 
+.up-band {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    right: 0;
+    top: 0;
+    height: 80px;
+    width: calc(100% - 200px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-upgrade {
+    padding: 10px 35px;
+    border-radius: 20px;
+    background-color: #000;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 00;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.footer-band {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #282828;
+}
 
 
 
@@ -139,3 +149,7 @@ h4 img {
 ul li a:hover, .foot-side-menu a:hover {
     color: #fff;
 } 
+
+.btn-upgrade:hover {
+    transform: scale(1.1);
+}

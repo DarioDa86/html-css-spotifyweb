@@ -92,14 +92,6 @@ ul li:last-child {
     vertical-align: baseline;
 }
 
-.square {
-    height: 300px;
-    width: 300px;
-    display: inline-block;
-    background-color: red;
-    border: 1px solid #fff;
-}
-
 h4 img {
     width: 24px;
     height: 22px;
@@ -172,11 +164,15 @@ h3, h4 {
 .subtitle {
     color: #717171;
     font-size: 13px;
-    /* text-align: center; */
+}
+
+.album-box .subtitle {
+    text-align: center;
 }
 
 .album-box img {
     width: 100%;
+    object-position: center;
 }
 
 .artist-box img {
@@ -188,9 +184,7 @@ h3, h4 {
     width: 16%;
     margin: 0 8px 0 0;
     margin-bottom: 20px;
-    text-align: center;
 }
-
 
 .row-main {
     display: flex;
@@ -219,8 +213,7 @@ h3, h4 {
     display: flex;
     align-items: center;
     height: 70px;
-    width: 300px;
-    border: 1px solid #fff;
+    width: 260px;
 }
 
 .col-left [class*="fa"]{
@@ -228,7 +221,6 @@ h3, h4 {
 }
 
 .artist-playing {
-    /* width: 30%; */
     overflow: hidden;
 }
 
@@ -252,8 +244,89 @@ h3, h4 {
 
 div a .fa-heart, div a .fa-folder {
     margin-left: 5px;
-    
 }
+
+.right-playing {
+    margin-left: 30px;
+}
+
+.col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.fa-random, 
+.fa-step-backward, 
+.fa-step-forward,
+.fa-redo-alt {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fa-play-circle {
+    font-size: 35px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-player a i {
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.min-song {
+    color: #fff;
+    font-size: 12px;
+}
+
+.bar-song {
+    width: 500px;
+    height: 3px;
+    background-color: #878787;
+    border-radius: 2px;
+    margin: 0 10px;
+}
+
+.volume-bar {
+    width: 150px;
+    height: 3px;
+    background-color: #878787;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+.settings-player {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.settings-player a i {
+    color: #fff;
+    margin-right: 15px;
+}
+
+.bar-player {
+    display: flex;
+    align-items: center;
+}
+
+/* .album-box img {
+    position: relative;
+}
+
+.album-box img::after {
+    content: '/f144';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+} */
 
 /* Hover */
 

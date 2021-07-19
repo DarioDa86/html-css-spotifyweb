@@ -330,15 +330,17 @@ div a .fa-heart, div a .fa-folder {
 }
 
 .container-volume {
-    width: 50%;
+    width:85%;
+    height: 3px;
+    background-color: #878787;
+    border-radius: 2px;
 }
 
 .volume-bar {
     width: 60%;
     height: 3px;
-    background-color: #878787;
+    background-color: #c1c1c1;
     border-radius: 2px;
-    margin-left: 10px;
 }
 
 .settings-player {

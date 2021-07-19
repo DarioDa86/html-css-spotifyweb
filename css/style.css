@@ -12,12 +12,10 @@
     display: table;
   }
 
-
 body {
     background-color:  #141922;
     font-family: 'Montserrat', sans-serif;
 }
-
 
 /* Side Menu */
 
@@ -34,9 +32,15 @@ body {
     color: #fff;
 }
 
-.logo-spotify>img {
+.logo-big{
     width: 130px;
     margin: 20px 0;
+}
+
+.logo-small {
+    display: none;
+    width: 50px;
+    height: 50px;
 }
 
 ul li {
@@ -137,12 +141,13 @@ h4 img {
     float: right;
     width: calc(100% - 200px);
     margin-bottom: 80px;
-    padding: 90px 20px 0 20px;
+    padding: 90px 5px 0 20px;
 }
 
 .row-main {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     margin: 20px 0;
 }
 
@@ -192,10 +197,8 @@ h3, h4 {
 }
 
 .album-box, .artist-box {
-    width: 16%;
-    margin: 0 8px 0 0;
-    margin-bottom: 20px;
-    /* position: relative; */
+    width: 15%;
+    margin: 0 10px 20px 0;
 }
 
 .album-img {
@@ -204,7 +207,6 @@ h3, h4 {
 }
 
 .album-img img::after {
-    display: ;
     position: absolute;
     display: block;
     top: 0;
@@ -237,19 +239,27 @@ h3, h4 {
     padding: 8px;
 }
 
-[class*="col"] {
+.col-center {
     display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    height: 70px;
-    border: 1px solid #fff;
+
+}
+
+.col-right, .col-left {
+    display: flex;
+    width: 20%;
+    align-items: center;
+}
+
+.col-right {
+    justify-content: flex-end;
 }
 
 .col-left [class*="fa"]{
     color: #878787;
-}
-
-.artist-playing {
-    overflow: hidden;
 }
 
 .artist-playing img {
@@ -276,13 +286,6 @@ div a .fa-heart, div a .fa-folder {
 
 .right-playing {
     margin-left: 30px;
-}
-
-.col-center {
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .fa-random, 
@@ -325,19 +328,16 @@ div a .fa-heart, div a .fa-folder {
     background: #c1c1c1;
 }
 
-.col-right, .col-left {
-    width: 15%;
-}
-
 .container-volume {
-    width:85%;
+    width:50%;
     height: 3px;
     background-color: #878787;
     border-radius: 2px;
+    position: relative;
 }
 
 .volume-bar {
-    width: 60%;
+    width: 45%;
     height: 3px;
     background-color: #c1c1c1;
     border-radius: 2px;
@@ -346,7 +346,6 @@ div a .fa-heart, div a .fa-folder {
 .settings-player {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 }
 
 .settings-player a i {
@@ -358,15 +357,22 @@ div a .fa-heart, div a .fa-folder {
     display: flex;
     align-items: center;
     width: 80%;
+    margin-top: 5px;
 }
 
 
 
 /* Hover */
 
-ul li a:hover, .foot-side-menu a:hover, .menu-center ul li:hover a {
+ul li a:hover, .foot-side-menu a:hover, 
+.menu-center ul li:hover a {
     color: #fff;
 } 
+
+.fa-plus::before 
+.fa-plus:hover {
+    background-color: #fff;
+}
 
 .btn-upgrade:hover {
     transform: scale(1.1);
@@ -380,7 +386,6 @@ ul li a:hover, .foot-side-menu a:hover, .menu-center ul li:hover a {
     background-color: #adff2f;
     margin: auto;
 }
-
 
 .bar-song:hover .play-line {
     height: 100%;
@@ -400,3 +405,32 @@ ul li a:hover, .foot-side-menu a:hover, .menu-center ul li:hover a {
     top: calc(50% - 5px);
 }
 
+.fa-play-circle:hover, .fa-random:hover, 
+.fa-step-backward:hover, .fa-play-circle:hover, 
+.fa-step-forward:hover, .fa-redo-alt:hover {
+    transform: scale(1.2);
+    color: #adff2f;
+}
+
+.container-volume:hover .volume-bar{
+    height: 100%;
+    width: 45%;
+    background: #adff2f;
+}
+
+.container-volume:hover .volume-bar::after{
+    content: '';
+    height: 8px;
+    width: 8px;
+    background: #adff2f;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 44%;
+    top: calc(50% - 4px);
+}
+
+.fa-heart:hover, .fa-folder:hover {
+    color: #fff;
+    transform: scale(1.3);
+}

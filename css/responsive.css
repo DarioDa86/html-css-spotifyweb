@@ -1,0 +1,96 @@
+
+/* 1100px */
+
+@media screen and (min-width: 701px) and (max-width: 1100px){
+
+    .album-box, .artist-box {
+        width: 23%;
+        margin: 0 10px 20px 0;
+    }
+
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* 700px */
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+   
+    .album-box, .artist-box {
+        width: 45%;
+        margin: 0 10px 20px 0;
+    }
+
+    .col-right {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-volume {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .col-center {
+        flex: none;
+    }
+
+
+}
+
+
+/* 600px */
+
+@media screen and (max-width: 600px) {
+   
+    .logo-spotify {
+        height: 50px;
+        width: 50px;
+        margin: 5px 0 10px 0;
+    }
+    
+
+    .logo-big {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+        width: 40px;
+    }
+    
+    .album-box, .artist-box {
+        width: 45%;
+        margin: 0 10px 20px 0;
+    }
+
+    .col-right {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-volume {
+        margin-top: 10px;
+    }
+
+    .col-center {
+        flex: none;
+    }
+
+    .artist-playing img {
+        display: none;
+    
+
+
+
+}

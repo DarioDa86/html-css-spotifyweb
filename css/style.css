@@ -13,8 +13,6 @@
   }
 
 
-
-
 body {
     background-color:  #141922;
     font-family: 'Montserrat', sans-serif;
@@ -28,14 +26,12 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     z-index: 2;
     width: 200px;
     height: calc(100vh - 80px);
     background-color: #000;
     padding-left: 10px;
     color: #fff;
-    overflow-y: auto;
 }
 
 .logo-spotify>img {
@@ -55,6 +51,7 @@ ul li a,
     color: #717171;
     font-weight: 500;
     font-size: 13px;
+    border-bottom: 1px solid transparent;
 }
 
 li a img {
@@ -75,6 +72,13 @@ ul li:last-child {
 .fa-plus::before {
     padding: 7px 8px;
     background-color: #a3a3a3;
+}
+
+.playlist-block {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .line {
@@ -112,6 +116,7 @@ h4 img {
     height: 80px;
     width: calc(100% - 200px);
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .btn-upgrade {
@@ -132,12 +137,17 @@ h4 img {
     float: right;
     width: calc(100% - 200px);
     margin-bottom: 80px;
-    /* background-color: yellow; */
     padding: 90px 20px 0 20px;
-    overflow-y: auto;
+}
+
+.row-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 .menu-center ul li {
+    border-bottom: 1px solid transparent;
     display: inline-block;
     text-decoration: none;
     margin: 10px;
@@ -173,6 +183,7 @@ h3, h4 {
 .album-box img {
     width: 100%;
     object-position: center;
+    object-fit: cover;
 }
 
 .artist-box img {
@@ -184,6 +195,23 @@ h3, h4 {
     width: 16%;
     margin: 0 8px 0 0;
     margin-bottom: 20px;
+    /* position: relative; */
+}
+
+.album-img {
+    position: relative;
+    width: 100%;
+}
+
+.album-img img::after {
+    display: ;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(88, 29, 29, 0.5);
 }
 
 .row-main {
@@ -213,7 +241,7 @@ h3, h4 {
     display: flex;
     align-items: center;
     height: 70px;
-    width: 260px;
+    border: 1px solid #fff;
 }
 
 .col-left [class*="fa"]{
@@ -252,8 +280,8 @@ div a .fa-heart, div a .fa-folder {
 
 .col-center {
     display: flex;
+    width: 40%;
     flex-direction: column;
-    justify-content: center;
     justify-content: space-around;
 }
 
@@ -283,15 +311,30 @@ div a .fa-heart, div a .fa-folder {
 }
 
 .bar-song {
-    width: 500px;
+    width: 90%;
     height: 3px;
     background-color: #878787;
     border-radius: 2px;
     margin: 0 10px;
+    position: relative;
+}
+
+.play-line {
+    height: 100%;
+    width: 20%;
+    background: #c1c1c1;
+}
+
+.col-right, .col-left {
+    width: 15%;
+}
+
+.container-volume {
+    width: 50%;
 }
 
 .volume-bar {
-    width: 150px;
+    width: 60%;
     height: 3px;
     background-color: #878787;
     border-radius: 2px;
@@ -312,25 +355,14 @@ div a .fa-heart, div a .fa-folder {
 .bar-player {
     display: flex;
     align-items: center;
+    width: 80%;
 }
 
-/* .album-box img {
-    position: relative;
-}
 
-.album-box img::after {
-    content: '/f144';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-} */
 
 /* Hover */
 
-ul li a:hover, .foot-side-menu a:hover {
+ul li a:hover, .foot-side-menu a:hover, .menu-center ul li:hover a {
     color: #fff;
 } 
 
@@ -338,12 +370,31 @@ ul li a:hover, .foot-side-menu a:hover {
     transform: scale(1.1);
 }
 
-.menu-center ul li:hover {
-    border-bottom: 1px solid #adff2f;
-    color: #fff;
+.menu-center ul li:hover:after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 30px;
+    background-color: #adff2f;
+    margin: auto;
 }
 
-.menu-center ul li:hover a{
-    color: #fff;
 
+.bar-song:hover .play-line {
+    height: 100%;
+    width: 20%;
+    background: #adff2f;
 }
+
+.bar-song:hover .play-line::after {
+    content: '';
+    height: 10px;
+    width: 10px;
+    background: #adff2f;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 5px);
+}
+

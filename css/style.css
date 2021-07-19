@@ -394,7 +394,7 @@ ul li a:hover, .foot-side-menu a:hover, .menu-center ul li:hover a {
     border-radius: 50%;
     display: block;
     position: absolute;
-    right: 0;
+    left: 19%;
     top: calc(50% - 5px);
 }
 

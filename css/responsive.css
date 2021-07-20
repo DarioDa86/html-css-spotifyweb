@@ -111,5 +111,6 @@
     .content {
         float: right;
         width: calc(100% - 60px);
+    }
 
 }

@@ -223,6 +223,23 @@ h3, h4 {
     right: 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
+.artist-box:hover .album-img::after {
+    content: "\f144";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 
 
 .row-main {

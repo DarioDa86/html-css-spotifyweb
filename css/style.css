@@ -185,10 +185,11 @@ h3, h4 {
     text-align: center;
 }
 
-.album-box img {
+.album-img img {
     width: 100%;
     object-position: center;
     object-fit: cover;
+    display: block;
 }
 
 .artist-box img {
@@ -199,6 +200,7 @@ h3, h4 {
 .album-box, .artist-box {
     width: 15%;
     margin: 0 10px 20px 0;
+    color: #fff;
 }
 
 .album-img {
@@ -206,15 +208,22 @@ h3, h4 {
     width: 100%;
 }
 
-.album-img img::after {
+.album-box:hover .album-img::after {
+    content: "\f144";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    display: block;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background-color: rgba(88, 29, 29, 0.5);
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 
 .row-main {
     display: flex;
@@ -241,7 +250,7 @@ h3, h4 {
 
 .col-center {
     display: flex;
-    width: 40%;
+    width: 35%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -292,20 +301,20 @@ div a .fa-heart, div a .fa-folder {
 .fa-step-backward, 
 .fa-step-forward,
 .fa-redo-alt {
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: none;
     color: #fff;
 }
 
 .fa-play-circle {
-    font-size: 35px;
+    font-size: 32px;
     text-decoration: none;
     color: #fff;
 }
 
 .btn-player a i {
     vertical-align: middle;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .min-song {

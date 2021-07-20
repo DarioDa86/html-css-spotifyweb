@@ -37,7 +37,7 @@
     }
 
     .container-volume {
-        margin-top: 10px;
+        margin: 10px auto;
         width: 100%;
     }
 
@@ -80,7 +80,8 @@
     }
 
     .container-volume {
-        margin-top: 10px;
+        margin: 10px auto;
+        width: 100%;
     }
 
     .col-center {
@@ -89,8 +90,7 @@
 
     .artist-playing img {
         display: none;
-    
-
+    }
 
 
 }
